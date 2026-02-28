@@ -29,7 +29,7 @@ const [genreResults, setGenreResults] = useState(null);
       return;
     }
 
-    fetch("http://localhost:5000/api/protected", {
+    fetch(`${API_BASE_URL}/api/protected`,  {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -62,7 +62,7 @@ const [genreResults, setGenreResults] = useState(null);
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:5000/api/keys", {
+      const res = await fetch(`${API_BASE_URL}/api/keys`, {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -79,7 +79,7 @@ const [genreResults, setGenreResults] = useState(null);
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:5000/api/keys", {
+      const res = await fetch(`${API_BASE_URL}/api/keys`, {
         method: "POST",
         headers: {
           Authorization: "Bearer " + token,
@@ -104,7 +104,7 @@ const [genreResults, setGenreResults] = useState(null);
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch("http://localhost:5000/api/analytics/summary", {
+    const res = await fetch(`${API_BASE_URL}/api/analytics/summary`, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -125,7 +125,7 @@ const [genreResults, setGenreResults] = useState(null);
     const token = localStorage.getItem("token");
 
     try {
-      await fetch(`http://localhost:5000/api/keys/${id}`, {
+      await fetch(`${API_BASE_URL}/api/keys/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: "Bearer " + token,
@@ -214,7 +214,7 @@ const getTopRated = async () => {
     }
 
     const res = await fetch(
-      `http://localhost:5000/api/process/top-rated?apiKey=${activeKey.key}`,
+      `${API_BASE_URL}/api/process/top-rated?apiKey=${activeKey.key}`,
       {
         headers: {
           Authorization: "Bearer " + token
@@ -266,7 +266,7 @@ const searchMovies = async () => {
     }
 
     const res = await fetch(
-      `http://localhost:5000/api/process/search?q=${searchQuery}&apiKey=${activeKey.key}`,
+      `${API_BASE_URL}/api/process/search?q=${searchQuery}&apiKey=${activeKey.key}`,
       {
         headers: {
           Authorization: "Bearer " + token
@@ -313,7 +313,7 @@ const getByGenre = async (genre) => {
     }
 
     const res = await fetch(
-      `http://localhost:5000/api/process/genre/${genre}?apiKey=${activeKey.key}`,
+      `${API_BASE_URL}/api/process/genre/${genre}?apiKey=${activeKey.key}`,
       {
         headers: {
           Authorization: "Bearer " + token
