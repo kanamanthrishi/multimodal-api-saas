@@ -100,6 +100,25 @@ if (recommendations.error) {
 // =============================
 // TOP RATED MOVIES
 // =============================
+/**
+ * @swagger
+ * /api/process/top-rated:
+ *   get:
+ *     summary: Get top rated movies
+ *     tags: [AI]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: apiKey
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Top rated movies fetched
+ */
+
 router.get(
   "/top-rated",
   verifyToken,
@@ -145,6 +164,30 @@ router.get(
 // =============================
 // SEARCH MOVIES
 // =============================
+/**
+ * @swagger
+ * /api/process/search:
+ *   get:
+ *     summary: Search movies
+ *     tags: [AI]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: q
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: apiKey
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Search results
+ */
+
 router.get(
   "/search",
   verifyToken,
@@ -194,6 +237,30 @@ router.get(
 // =============================
 // MOVIES BY GENRE
 // =============================
+/**
+ * @swagger
+ * /api/process/search:
+ *   get:
+ *     summary: Search movies
+ *     tags: [AI]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: q
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: apiKey
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Search results
+ */
+
 router.get(
   "/genre/:genre",
   verifyToken,

@@ -10,6 +10,19 @@ const asyncHandler = require("../utils/asyncHandler");
 // =============================
 // USER USAGE SUMMARY
 // =============================
+/**
+ * @swagger
+ * /api/analytics/summary:
+ *   get:
+ *     summary: Get analytics summary
+ *     tags: [Analytics]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Analytics data
+ */
+
 router.get(
   "/summary",
   verifyToken,
