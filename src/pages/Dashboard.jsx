@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { API_BASE_URL } from "../config";
 
 export default function Dashboard() {
   const [apiKeys, setApiKeys] = useState([]);
@@ -169,7 +169,7 @@ const [genreResults, setGenreResults] = useState(null);
       return;
     }
 
-    const res = await fetch("http://localhost:5000/api/process", {
+    const res = await fetch(`${API_BASE_URL}/api/process`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
