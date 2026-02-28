@@ -1,0 +1,19 @@
+const movies = [
+  { title: "Inception", genres: ["Sci-Fi", "Thriller"] },
+  { title: "Interstellar", genres: ["Sci-Fi", "Drama"] },
+  { title: "The Matrix", genres: ["Sci-Fi", "Action"] },
+  { title: "Shutter Island", genres: ["Thriller", "Mystery"] },
+  { title: "Tenet", genres: ["Sci-Fi", "Action"] },
+  { title: "Avengers: Endgame", genres: ["Action", "Adventure"] },
+  { title: "The Dark Knight", genres: ["Action", "Crime"] },
+  { title: "Parasite", genres: ["Drama", "Thriller"] },
+  { title: "Joker", genres: ["Crime", "Drama"] },
+  { title: "Titanic", genres: ["Romance", "Drama"] },
+  { title: "The Notebook", genres: ["Romance", "Drama"] },
+  { title: "Gladiator", genres: ["Action", "Drama"] },
+  { title: "The Conjuring", genres: ["Horror", "Thriller"] },
+  { title: "It", genres: ["Horror", "Thriller"] },
+  { title: "Doctor Strange", genres: ["Action", "Fantasy"] }
+];
+
+module.exports = movies;
