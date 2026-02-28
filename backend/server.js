@@ -25,8 +25,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: [
-    "http://localhost:5173",  // your local frontend
-    "https://your-frontend.onrender.com" // future frontend
+    "http://localhost:5173",
+    "https://multimodal-api-saas.onrender.com"
   ]
 }));
 app.use(helmet());
